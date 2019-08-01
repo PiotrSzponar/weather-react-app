@@ -4,7 +4,7 @@ React app bootstrapped with [Create React App](https://github.com/facebook/creat
 
 ## Demo
 
-[https://piotrszponar.github.io/weather-react-app/](https://piotrszponar.github.io/weather-react-app/)
+[http://piotr-szponar.pl/react/weather-react-app/](http://piotr-szponar.pl/react/weather-react-app/)
 
 ## Setup
 
