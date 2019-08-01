@@ -1,0 +1,13 @@
+.Forecast {
+  margin-top: 0.5rem;
+  grid-area: forecast;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 37.5em) {
+  .Forecast {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,1 @@
+export const cToF = c => c*1.8+32;

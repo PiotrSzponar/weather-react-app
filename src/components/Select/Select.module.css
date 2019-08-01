@@ -1,0 +1,10 @@
+.Select {
+  grid-area: select;
+}
+
+.selectCity {
+  width: 100%;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 0.5rem;
+}

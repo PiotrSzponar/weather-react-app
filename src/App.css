@@ -1,33 +1,38 @@
+:root {
+  --dark-text: #444;
+  --light-text: #888;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background: #fff;
+  color: var(--dark-text);
+  margin: 0;
+  padding: 1rem;
+  max-width: 800px;
+  min-width: 400px;
+  display: grid;
+  grid-template-rows: 4.5rem auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "select select"
+    "today todayinfo"
+    "forecast forecast";
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.15);
 }
 
-.App-link {
-  color: #61dafb;
+.muted {
+  color: var(--light-text);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+sup {
+  font-weight: 400;
+  font-size: 60%;
+  color: var(--light-text);
+}
+
+@media screen and (min-width: 37.5em) {
+  .App {
+    margin: 1rem;
   }
 }
