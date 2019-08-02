@@ -17,12 +17,13 @@ const App = () => {
   const getWeather = async (id) => {
     const date = new Date();
     const dateString = new Date(date.getTime() - (date.getTimezoneOffset() * 60000 )).toISOString().split("T")[0];
-
-    const response = await fetch(`http://dev-weather-api.azurewebsites.net/api/city/${id}/weather?date=${dateString}`);
-
-    const data = await response.json();
-
-    setWeather(data);
+    try {
+      const response = await fetch(`http://dev-weather-api.azurewebsites.net/api/city/${id}/weather?date=${dateString}`);
+      const data = await response.json();
+      setWeather(data);
+    } catch(err) {
+      console.error(err);
+    }
   }
 
   const changeCallback = id => {

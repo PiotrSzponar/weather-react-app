@@ -10,11 +10,13 @@ const Select = ({ idCb, id }) => {
   }, []);
 
   const getCitiesList = async () => {
-  const response = await fetch('http://dev-weather-api.azurewebsites.net/api/city');
-
-  const data = await response.json();
-
-  setCities(data);
+    try {
+      const response = await fetch('http://dev-weather-api.azurewebsites.net/api/city');
+      const data = await response.json();
+      setCities(data);
+    } catch(err) {
+      console.error(err);
+    }
   }
 
   const handleChange = e => {
